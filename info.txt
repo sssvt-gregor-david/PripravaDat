@@ -1,0 +1,1 @@
+ve winforms přidávání údajů a ukládání do databáze
