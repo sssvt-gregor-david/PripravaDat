@@ -88,9 +88,11 @@ namespace AddUserProg
 
                 ds.Tables[0].TableName = "tbUsers";
 
+                sb.Append("Id,name,mainSurname,secondarySurname,degreeBeforeName,degreeAfterName,homeAddress,ogranizationalUnit," +
+                    "telNumberWork,telNumberPrivate,emailWork,emailPrivate,employmentFrom,employmentTo,maternityOrParentalLeave");
+                sb.Append("\r\n");
 
-
-                foreach(DataRow dr in ds.Tables["tbUsers"].Rows)
+                foreach (DataRow dr in ds.Tables["tbUsers"].Rows)
                 {
                     int userId = Convert.ToInt32(dr["ID"]);
                     sb.Append(userId.ToString() + ",");
@@ -136,7 +138,7 @@ namespace AddUserProg
             StreamWriter file = new(@"C:\Users\david\PripravaDat\PripravaDat\ExportedData\tbUsers.csv");
             file.WriteLine(sb.ToString());
             file.Close();
-
+            MessageBox.Show("SCV created successfully.");
         }
     }
 }
