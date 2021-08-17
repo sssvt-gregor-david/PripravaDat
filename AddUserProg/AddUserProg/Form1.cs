@@ -89,7 +89,7 @@ namespace AddUserProg
                 ds.Tables[0].TableName = "tbUsers";
 
                 sb.Append("Id,name,mainSurname,secondarySurname,degreeBeforeName,degreeAfterName,homeAddress,ogranizationalUnit," +
-                    "telNumberWork,telNumberPrivate,emailWork,emailPrivate,employmentFrom,employmentTo,maternityOrParentalLeave");
+                    "telNumberWork,telNumberPrivate,emailWork,emailPrivate,employmentFrom,employmentTo,maternityOrParentalLeave,");
                 sb.Append("\r\n");
 
                 foreach (DataRow dr in ds.Tables["tbUsers"].Rows)
