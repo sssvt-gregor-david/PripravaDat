@@ -89,7 +89,7 @@ namespace AddUserProg
                 ds.Tables[0].TableName = "tbUsers";
 
                 sb.Append("Id,name,mainSurname,secondarySurname,degreeBeforeName,degreeAfterName,homeAddress,ogranizationalUnit," +
-                    "telNumberWork,telNumberPrivate,emailWork,emailPrivate,employmentFrom,employmentTo,maternityOrParentalLeave,");
+                    "telNumberWork,telNumberPrivate,emailWork,emailPrivate,employmentFrom,employmentTo,maternityOrParentalLeave");
                 sb.Append("\r\n");
 
                 foreach (DataRow dr in ds.Tables["tbUsers"].Rows)
@@ -128,7 +128,7 @@ namespace AddUserProg
                     sb.Append(userET.ToString() + ",");
 
                     int userMPL = Convert.ToInt32(dr["maternityOrParentalLeave"]);
-                    sb.Append(userMPL.ToString() + ",");
+                    sb.Append(userMPL.ToString()/* + ","*/);
 
                     sb.Append("\r\n");
 
