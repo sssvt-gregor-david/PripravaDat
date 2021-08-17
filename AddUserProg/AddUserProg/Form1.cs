@@ -77,7 +77,7 @@ namespace AddUserProg
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //string cs = ConfigurationManager.ConnectionStrings[conString].ConnectionString;
+            //string cs = ConfigurationManager.ConnectionStrings[conString].ConnectionString; 
             StringBuilder sb = new();
             using SqlConnection con = new(conString);
             {
