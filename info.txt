@@ -1,2 +1,0 @@
-ve winforms přidávání údajů a ukládání do databáze
-nejspíš nebude nutný dělat více jak 1 tabulku

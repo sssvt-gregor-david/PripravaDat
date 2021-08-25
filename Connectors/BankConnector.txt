@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ connector for bank
+  -->
+
+
+<resource oid="03c3ceea-78e2-11e6-954d-dfdfa9ace0cf"
+            xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+            xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+            xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
+            xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"
+            xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+            xmlns:ext="http://midpoint.evolveum.com/xml/ns/story/orgsync/ext"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3">
+
+    <name>HR Bank System</name>
+
+    <description>
+        HR resource using CSV connector. Edited for tbUsers.
+    </description>
+
+    <connectorRef type="ConnectorType">
+        <filter>
+            <q:equal>
+                <q:path>c:connectorType</q:path>
+                <q:value>com.evolveum.polygon.connector.csv.CsvConnector</q:value>
+            </q:equal>
+        </filter>
+    </connectorRef>
+
+    <connectorConfiguration>
+        <!-- Configuration specific for the CSV connector -->
+        <icfc:configurationProperties
+                xmlns:icfccsvfile="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-csv/com.evolveum.polygon.connector.csv.CsvConnector">
+            <icfccsvfile:filePath>/opt/midpoint/var/resources/hr.csv</icfccsvfile:filePath>
+            <icfccsvfile:encoding>utf-8</icfccsvfile:encoding>
+            <icfccsvfile:fieldDelimiter>,</icfccsvfile:fieldDelimiter>
+            <icfccsvfile:multivalueDelimiter>;</icfccsvfile:multivalueDelimiter>
+            <icfccsvfile:uniqueAttribute>Id</icfccsvfile:uniqueAttribute>
+        </icfc:configurationProperties>
+    </connectorConfiguration>
+
+    <schemaHandling>
+
+        <objectType>
+            <displayName>Default Account</displayName>
+            <default>true</default>
+            <objectClass>ri:AccountObjectClass</objectClass>
+            <attribute>
+                <ref>ri:Id</ref>
+                <displayName>Name</displayName>
+                <limitations>
+                    <minOccurs>0</minOccurs>
+                    <access>
+                        <read>true</read>
+                        <add>true</add>
+                        <modify>true</modify>
+                    </access>
+                </limitations>
+                <inbound>
+                    <target>
+                        <path>$focus/name</path>
+                    </target>
+                </inbound>
+                <inbound>
+                    <target>
+                        <path>$focus/employeeNumber</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:name</ref>
+                <displayName>First name</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/givenName</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:mainSurname</ref>
+                <displayName>Last name</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/familyName</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:secondarySurname</ref>
+                <displayName>Secondary surname</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/secondarySurname</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:degreeBeforeName</ref>
+                <displayName>Degree before name</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/degree1</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:degreeAfterName</ref>
+                <displayName>Degree after name</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/degree2</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:homeAddress</ref>
+                <displayName>Home address</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/homeAddress</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:organizationalUnit</ref>
+                <displayName>Organizational unit</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/dorganizationalUnit</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:telNumberWork</ref>
+                <displayName>Telephone number to work</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/telNumberWork</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:telNumberPrivate</ref>
+                <displayName>Telephone number - private</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/telNumberPrivate</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:emailWork</ref>
+                <displayName>Email to work</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/emailWork</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:emailPrivate</ref>
+                <displayName>Email - private</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/emailPrivate</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:employmentFrom</ref>
+                <displayName>Employment from</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/employmentFrom</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:employmentTo</ref>
+                <displayName>Employment to</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/employmentTo</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <attribute>
+                <ref>ri:maternityOrParentalLeave</ref>
+                <displayName>Maternity or parental leave</displayName>
+                <inbound>
+                    <target>
+                        <path>$focus/maternityOrParentalLeave</path>
+                    </target>
+                </inbound>
+            </attribute>
+            <activation>
+                <administrativeStatus>
+                    <inbound/>
+                </administrativeStatus>
+            </activation>
+
+            <credentials>
+                <password>
+                    <inbound>
+                        <strength>weak</strength>
+                        <expression>
+                            <generate/>
+                        </expression>
+                    </inbound>
+                </password>
+            </credentials>
+
+        </objectType>
+
+    </schemaHandling>
+
+    <projection>
+        <assignmentPolicyEnforcement>none</assignmentPolicyEnforcement>
+    </projection>
+
+    <synchronization>
+        <objectSynchronization>
+            <enabled>true</enabled>
+            <correlation>
+                <q:equal>
+                    <q:path>employeeNumber</q:path>
+                    <expression>
+                        <path>$projection/attributes/empno</path>
+                    </expression>
+                </q:equal>
+            </correlation>
+            <reaction>
+                <situation>linked</situation>
+                <synchronize>true</synchronize>
+            </reaction>
+            <reaction>
+                <situation>deleted</situation>
+                <synchronize>true</synchronize>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#deleteFocus</handlerUri>
+                </action>
+            </reaction>
+            <reaction>
+                <situation>unlinked</situation>
+                <synchronize>true</synchronize>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#link</handlerUri>
+                </action>
+            </reaction>
+            <reaction>
+                <situation>unmatched</situation>
+                <synchronize>true</synchronize>
+                <action>
+                    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#addFocus</handlerUri>
+                </action>
+            </reaction>
+        </objectSynchronization>
+    </synchronization>
+</resource>
