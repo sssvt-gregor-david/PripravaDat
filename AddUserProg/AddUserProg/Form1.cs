@@ -21,13 +21,17 @@ namespace AddUserProg
             InitializeComponent();
         }
 
+        
+
         public string conString = "Data Source=DESKTOP-BV2DTN3\\MSSQLSERVER02;Initial Catalog=bankUsers;Integrated Security=True";
         private void button1_Click(object sender, EventArgs e)
         {
+            int userId;
             SqlConnection con = new(conString);
             con.Open();
             if (con.State==System.Data.ConnectionState.Open)
             {
+                
                 string q = "insert into tbUsers(name, mainSurname, secondarySurname, degreeBeforeName, degreeAfterName, homeAddress, organizationalUnit," +
                     " telNumberWork, telNumberPrivate, emailWork, emailPrivate, employmentFrom, employmentTo, maternityOrParentalLeave)" +
                     "values('" + nameTextBox.Text.ToString() + "','" + mainSurnameTextBox.Text.ToString() + "','" + secondarySurnameTextBox.Text.ToString()
@@ -48,8 +52,38 @@ namespace AddUserProg
                     {
                         SqlCommand cmd = new(q, con);
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("User added successfully.");
+                        
 
+                        StringBuilder sb = new();
+                        using SqlConnection conn = new(conString);
+                        {
+                            SqlDataAdapter da = new("select top 1 Id from tbUsers order by Id desc", conn);
+                            DataSet ds = new();
+
+                            da.Fill(ds);
+
+                            ds.Tables[0].TableName = "tbUsers";
+
+                            sb.Append("Id");
+                            sb.Append("\r\n");
+
+                            foreach (DataRow dr in ds.Tables["tbUsers"].Rows)
+                            {
+                                userId = Convert.ToInt32(dr["ID"]);
+
+
+
+                                addRecord(userId, nameTextBox.Text, mainSurnameTextBox.Text, secondarySurnameTextBox.Text, degreeBeforeNameTextBox.Text, degreeAfterNameTextBox.Text,
+                                    homeAddressTextBox.Text, organizationalUnitTextBox.Text, telNumberWorkTextBox.Text, telNumberPrivateTextBox.Text, emailWorkTextBox.Text,
+                                    emailPrivateTextBox.Text, employmentFromTextBox.Text, employmentToTextBox.Text, maternityOrParentalLeaveTextBox.Text);
+                            }
+
+                            
+
+                        }
+
+
+                        MessageBox.Show("User added successfully.");
                         nameTextBox.Text = "";
                         mainSurnameTextBox.Text = "";
                         secondarySurnameTextBox.Text = "";
@@ -64,81 +98,37 @@ namespace AddUserProg
                         employmentFromTextBox.Text = "";
                         employmentToTextBox.Text = "";
                         maternityOrParentalLeaveTextBox.Text = "";
+
+
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Error : uncorrect organizational Unit.");
+                    MessageBox.Show("Error : uncorrect or missing organizational Unit.");
                 }
 
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public static void addRecord (int userId, string name, string surname, string secondarySurname, string degreeBeforeName, string degreeAfterName, string homeAddress,
+            string organizationalUnit, string workNumber, string privateNumber, string workEmail, string privateEmail, string employmentFrom, string employmentTo, string maternityOrParentalLeave)
         {
-            //string cs = ConfigurationManager.ConnectionStrings[conString].ConnectionString; 
-            StringBuilder sb = new();
-            using SqlConnection con = new(conString);
+            try
             {
-                SqlDataAdapter da = new("select * from tbUsers", con);
-                DataSet ds = new();
 
-                da.Fill(ds);
-
-                ds.Tables[0].TableName = "tbUsers";
-
-                sb.Append("Id,name,mainSurname,secondarySurname,degreeBeforeName,degreeAfterName,homeAddress,ogranizationalUnit," +
-                    "telNumberWork,telNumberPrivate,emailWork,emailPrivate,employmentFrom,employmentTo,maternityOrParentalLeave");
-                sb.Append("\r\n");
-
-                foreach (DataRow dr in ds.Tables["tbUsers"].Rows)
-                {
-                    int userId = Convert.ToInt32(dr["ID"]);
-                    sb.Append(userId.ToString() + ",");
-
-                    sb.Append(dr["name"].ToString() + ",");
-
-                    sb.Append(dr["mainSurname"].ToString() + ",");
-
-                    sb.Append(dr["secondarySurname"].ToString() + ",");
-
-                    sb.Append(dr["degreeBeforeName"].ToString() + ",");
-
-                    sb.Append(dr["degreeAfterName"].ToString() + ",");
-
-                    sb.Append(dr["homeAddress"].ToString() + ",");
-
-                    sb.Append(dr["organizationalUnit"].ToString() + ",");
-
-                    int userTNW = Convert.ToInt32(dr["telNumberWork"]);
-                    sb.Append(userTNW.ToString() + ",");
-
-                    int userTNP = Convert.ToInt32(dr["telNumberPrivate"]);
-                    sb.Append(userTNP.ToString() + ",");
-
-                    sb.Append(dr["emailWork"].ToString() + ",");
-
-                    sb.Append(dr["emailPrivate"].ToString() + ",");
-
-                    DateTime userEF = Convert.ToDateTime(dr["employmentFrom"]);
-                    sb.Append(userEF.ToString() + ",");
-
-                    DateTime userET = Convert.ToDateTime(dr["employmentTo"]); 
-                    sb.Append(userET.ToString() + ",");
-
-                    int userMPL = Convert.ToInt32(dr["maternityOrParentalLeave"]);
-                    sb.Append(userMPL.ToString()/* + ","*/);
-
-                    sb.Append("\r\n");
-
-                }
+                StreamWriter file = new(@"C:\Users\david\PripravaDat\PripravaDat\ExportedData\updatableCSV\UpdatableCSV4.csv", true);
+                file.WriteLine(userId + "," + name + "," + surname + "," + secondarySurname + "," + degreeBeforeName + "," + degreeAfterName + "," + homeAddress
+                         + "," + organizationalUnit + "," + workNumber + "," + privateNumber + "," + workEmail + "," + privateEmail + "," + employmentFrom + "," + employmentTo
+                          + "," + maternityOrParentalLeave);
+                 file.Close();
+                
             }
-
-            StreamWriter file = new(@"C:\Users\david\PripravaDat\PripravaDat\ExportedData\tbUsers.csv");
-            file.WriteLine(sb.ToString());
-            file.Close();
-            MessageBox.Show("SCV created successfully.");
+            catch(Exception ex)
+            {
+                throw new ApplicationException("Error :", ex);
+            }
         }
+
     }
 }

@@ -59,20 +59,17 @@ namespace AddUserProg
             this.employmentToTextBox = new System.Windows.Forms.TextBox();
             this.maternityOrParentalLeaveTextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(447, 276);
+            this.button1.Location = new System.Drawing.Point(519, 320);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 191);
+            this.button1.Size = new System.Drawing.Size(246, 129);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add a new user";
             this.button1.UseVisualStyleBackColor = true;
@@ -317,24 +314,6 @@ namespace AddUserProg
             this.label15.TabIndex = 29;
             this.label15.Text = "0 = false; 1 = true";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(578, 208);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(73, 15);
-            this.label16.TabIndex = 30;
-            this.label16.Text = "dd.mm.yyyy";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(577, 164);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(73, 15);
-            this.label17.TabIndex = 31;
-            this.label17.Text = "dd.mm.yyyy";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -363,28 +342,14 @@ namespace AddUserProg
             this.label20.TabIndex = 34;
             this.label20.Text = "Red color = mandatory data";
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(639, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 191);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Create CSV";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 479);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.maternityOrParentalLeaveTextBox);
             this.Controls.Add(this.employmentToTextBox);
@@ -454,12 +419,9 @@ namespace AddUserProg
         private System.Windows.Forms.TextBox employmentToTextBox;
         private System.Windows.Forms.TextBox maternityOrParentalLeaveTextBox;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button2;
     }
 }
 

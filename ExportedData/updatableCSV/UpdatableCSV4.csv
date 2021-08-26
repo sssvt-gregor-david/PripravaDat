@@ -1,0 +1,5 @@
+Id,name,mainSurname,secondarySurname,degreeBeforeName,degreeAfterName,homeAddress,ogranizationalUnit,telNumberWork,telNumberPrivate,emailWork,emailPrivate,employmentFrom,employmentTo,maternityOrParentalLeave
+1,Ondra,Balvín,,Ing.,,Sedláčkova 842/17,IT Department,111222333,333222111,OndraBalvin@expo.cz,OndraBalvin@gmail.com,1.9.2017,1.9.2022,0
+2,Jarmila,Nováková,,,,Fučíkova 842/12,Property Management Department,987987987,256154464,JarmilaNovakova@expo.cz,JNovakova@seznam.cz,2.10.2020,2.10.2023,0
+3,Karel,Procházka,,Ing.,,U Parku 952/18,Executive Officer,777555333,333555777,KarelProchazka@expo.cz,KarelProchazka@seznam.cz,7.7.2015,7.7.2025,0
+4,Vladimír,Ježek,,Mgr.,,Leninova 163/4 Pardubice ,Sales Department,987654789,268666713,VladimirJezek@expo.cz,VladimirJezek@gmail.com,1.1.2016,1.1.2022,0
