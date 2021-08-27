@@ -1,0 +1,11 @@
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\AddUserProg.exe
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\AddUserProg.dll
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\AddUserProg.deps.json
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\AddUserProg.runtimeconfig.json
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\AddUserProg.pdb
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\System.Data.SqlClient.dll
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\runtimes\win-arm64\native\sni.dll
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\runtimes\win-x64\native\sni.dll
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\runtimes\win-x86\native\sni.dll
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\david\PripravaDat\PripravaDat\AddUserProg\AddUserProg\bin\publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
