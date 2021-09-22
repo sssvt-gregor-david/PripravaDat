@@ -1,0 +1,413 @@
+2021-08-29 06:51:12,199 [] [main] INFO (org.springframework.boot.SpringApplication): 
+                   _ _____              _
+             _    | |  _  \     _     _| |_
+   ___ ____ (_) __| | |_) |___ (_)___|_   _|
+  |  _ ` _ `| |/ _  |  __/  _ \| |  _` | |
+  | | | | | | | (_| | |  | (_) | | | | | |_
+  |_| |_| |_|_|\____|_|  \____/|_|_| |_|\__|  by Evolveum and partners
+
+  Dual-licensed under Apache License 2.0 and European Union Public License.
+  Version: 4.4-SNAPSHOT
+  Sources: https://github.com/Evolveum/midpoint.git/gui/admin-gui, branch: origin/master, build: v4.4devel-815-g4e4bbf76d7
+  Bug reporting system: https://jira.evolveum.com/browse/MID
+  Product information: https://midpoint.evolveum.com
+
+
+2021-08-29 06:51:12,336 [] [main] INFO (com.evolveum.midpoint.web.boot.MidPointSpringApplication): Starting MidPointSpringApplication using Java 11.0.11 on d08f11878c5d with PID 21 (/opt/midpoint/lib/midpoint.war started by root in /)
+2021-08-29 06:51:12,337 [] [main] INFO (com.evolveum.midpoint.web.boot.MidPointSpringApplication): No active profile set, falling back to default profiles: default
+2021-08-29 06:51:15,600 [] [main] INFO (com.evolveum.midpoint.init.ApplicationHomeSetup): midpoint.home = /opt/midpoint/var
+2021-08-29 06:51:15,605 [] [main] INFO (com.evolveum.midpoint.init.ApplicationHomeSetup): Directory /opt/midpoint/var already exists. Reusing it.
+2021-08-29 06:51:15,606 [] [main] WARN (com.evolveum.midpoint.init.ApplicationHomeSetup): Missing midPoint home directory '/opt/midpoint/var/icf-connectors'. Creating.
+2021-08-29 06:51:15,609 [] [main] WARN (com.evolveum.midpoint.init.ApplicationHomeSetup): Missing midPoint home directory '/opt/midpoint/var/idm-legacy'. Creating.
+2021-08-29 06:51:15,611 [] [main] INFO (com.evolveum.midpoint.init.ApplicationHomeSetup): Directory /opt/midpoint/var/log already exists. Reusing it.
+2021-08-29 06:51:15,612 [] [main] WARN (com.evolveum.midpoint.init.ApplicationHomeSetup): Missing midPoint home directory '/opt/midpoint/var/schema'. Creating.
+2021-08-29 06:51:15,614 [] [main] WARN (com.evolveum.midpoint.init.ApplicationHomeSetup): Missing midPoint home directory '/opt/midpoint/var/import'. Creating.
+2021-08-29 06:51:15,616 [] [main] WARN (com.evolveum.midpoint.init.ApplicationHomeSetup): Missing midPoint home directory '/opt/midpoint/var/export'. Creating.
+2021-08-29 06:51:15,618 [] [main] WARN (com.evolveum.midpoint.init.ApplicationHomeSetup): Missing midPoint home directory '/opt/midpoint/var/tmp'. Creating.
+2021-08-29 06:51:15,619 [] [main] WARN (com.evolveum.midpoint.init.ApplicationHomeSetup): Missing midPoint home directory '/opt/midpoint/var/lib'. Creating.
+2021-08-29 06:51:15,621 [] [main] WARN (com.evolveum.midpoint.init.ApplicationHomeSetup): Missing midPoint home directory '/opt/midpoint/var/trace'. Creating.
+2021-08-29 06:51:15,627 [] [main] INFO (com.evolveum.midpoint.init.StartupConfiguration): Loading midPoint configuration from file /opt/midpoint/var/config.xml
+2021-08-29 06:51:15,627 [] [main] WARN (com.evolveum.midpoint.init.StartupConfiguration): Configuration file /opt/midpoint/var/config.xml does not exists. Need to do extraction ...
+2021-08-29 06:51:17,397 [] [main] INFO (com.evolveum.midpoint.repo.sql.SqlEmbeddedRepository): Database wont be deleted, dropIfExists=false.
+2021-08-29 06:51:17,398 [] [main] INFO (com.evolveum.midpoint.repo.sql.SqlEmbeddedRepository): Starting h2 in server mode.
+2021-08-29 06:51:17,614 [] [main] INFO (com.evolveum.midpoint.repo.sql.SqlEmbeddedRepository): H2 files are in '/opt/midpoint/var'.
+2021-08-29 06:51:17,624 [] [main] INFO (com.evolveum.midpoint.repo.sqlbase.DataSourceFactory): Loading datasource.
+2021-08-29 06:51:17,625 [] [main] INFO (com.evolveum.midpoint.repo.sqlbase.DataSourceFactory): Constructing default datasource with connection pooling; JDBC URL: jdbc:h2:tcp://localhost:5437/midpoint
+ Using driver: org.h2.Driver
+2021-08-29 06:51:21,355 [] [main] INFO (com.evolveum.midpoint.init.ConfigurablePrismContextFactory): Loading extension schemas from folder '/opt/midpoint/var/schema'.
+2021-08-29 06:51:28,308 [] [main] INFO (com.evolveum.midpoint.prism.impl.crypto.KeyStoreBasedProtectorImpl): Using file keystore at /opt/midpoint/var//keystore.jceks
+2021-08-29 06:51:28,560 [] [main] WARN (com.evolveum.midpoint.repo.sql.schemacheck.SchemaChecker): Found a problem with DB schema: Schema-validation: missing table [m_acc_cert_campaign]
+2021-08-29 06:51:28,807 [] [main] INFO (com.evolveum.midpoint.repo.sql.schemacheck.SchemaChecker): The following midPoint tables are present (not necessarily well-defined): []
+2021-08-29 06:51:28,808 [] [main] INFO (com.evolveum.midpoint.repo.sql.schemacheck.SchemaChecker): Couldn't find the following midPoint tables: [m_acc_cert_campaign, m_acc_cert_case, m_acc_cert_definition, m_acc_cert_wi, m_acc_cert_wi_reference, m_assignment, m_assignment_ext_boolean, m_assignment_ext_date, m_assignment_ext_long, m_assignment_ext_poly, m_assignment_ext_reference, m_assignment_ext_string, m_assignment_extension, m_assignment_policy_situation, m_assignment_reference, m_audit_delta, m_audit_event, m_audit_item, m_audit_prop_value, m_audit_ref_value, m_audit_resource, m_case_wi, m_case_wi_reference, m_connector_target_system, m_ext_item, m_focus_photo, m_object, m_object_ext_boolean, m_object_ext_date, m_object_ext_long, m_object_ext_poly, m_object_ext_reference, m_object_ext_string, m_object_policy_situation, m_object_subtype, m_object_text_info, m_operation_execution, m_org_closure, m_org_org_type, m_reference, m_report_output, m_service_type, m_shadow, m_task, m_task_dependent, m_user_employee_type, m_user_organization, m_user_organizational_unit, m_abstract_role, m_archetype, m_case, m_connector, m_connector_host, m_dashboard, m_focus, m_form, m_function_library, m_generic_object, m_global_metadata, m_lookup_table, m_lookup_table_row, m_node, m_object_collection, m_object_template, m_org, m_report, m_resource, m_role, m_security_policy, m_sequence, m_service, m_system_configuration, m_trigger, m_user, m_value_policy]
+2021-08-29 06:51:28,815 [] [main] WARN (com.evolveum.midpoint.repo.sql.schemacheck.SchemaChecker): Database schema version could not be determined: org.hibernate.exception.SQLGrammarException: could not prepare statement
+2021-08-29 06:51:28,816 [] [main] INFO (com.evolveum.midpoint.repo.sql.schemacheck.SchemaActionComputer): Required database schema version: 4.3, declared version: null (METADATA_TABLE_MISSING), data structure compliance: NO_TABLES (Schema-validation: missing table [m_acc_cert_campaign])
+2021-08-29 06:51:28,820 [] [main] INFO (com.evolveum.midpoint.repo.sql.schemacheck.SchemaChecker): Attempting to create database tables from file 'h2-4.3-all.sql'.
+2021-08-29 06:51:29,035 [] [main] INFO (com.evolveum.midpoint.repo.sql.schemacheck.SchemaChecker): Validating database tables after creation.
+2021-08-29 06:51:29,105 [] [main] INFO (com.evolveum.midpoint.repo.sql.schemacheck.SchemaChecker): Schema creation was successful.
+2021-08-29 06:51:29,217 [] [main] INFO (com.evolveum.midpoint.init.AuditFactory): Getting factory 'com.evolveum.midpoint.audit.impl.LoggerAuditServiceFactory'
+2021-08-29 06:51:29,218 [] [main] INFO (com.evolveum.midpoint.init.AuditFactory): Getting factory 'com.evolveum.midpoint.repo.sql.SqlAuditServiceFactory'
+2021-08-29 06:51:29,218 [] [main] INFO (com.evolveum.midpoint.repo.sql.SqlAuditServiceFactory): Initializing Sql audit service factory.
+2021-08-29 06:51:29,219 [] [main] INFO (com.evolveum.midpoint.repo.sql.SqlAuditServiceFactory): SQL audit service will use default repository configuration.
+2021-08-29 06:51:29,404 [] [main] INFO (com.evolveum.midpoint.repo.sql.SqlAuditServiceFactory): SQL audit service factory initialization complete.
+2021-08-29 06:51:29,453 [] [main] INFO (com.evolveum.midpoint.schema.cache.CacheConfigurationManager): Creating initial caching configuration based on default caching profile (system configuration is not known at this moment)
+2021-08-29 06:51:29,683 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.UpAndDown): Task Manager initialization.
+2021-08-29 06:51:29,687 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.NodeIdComputer): Using default node ID 'DefaultNode'
+2021-08-29 06:51:29,697 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.UpAndDown): Task Manager: Quartz Job Store: in-memory, NOT clustered. Threads: 10
+2021-08-29 06:51:29,722 [] [main] WARN (com.evolveum.midpoint.common.CachedResourceBundleMessageSource): ResourceBundle [Midpoint] not found for MessageSource: Can't find bundle for base name Midpoint, locale en_US
+2021-08-29 06:51:29,723 [] [main] WARN (com.evolveum.midpoint.common.CachedResourceBundleMessageSource): ResourceBundle [schema] not found for MessageSource: Can't find bundle for base name schema, locale en_US
+2021-08-29 06:51:29,780 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.cluster.NodeRegistrar): Registering this node in the repository as DefaultNode at d08f11878c5d
+2021-08-29 06:51:29,813 [REPOSITORY] [main] INFO (com.evolveum.midpoint.repo.sqlbase.perfmon.SqlPerformanceMonitorImpl): SQL Performance Monitor initialized (level = 4)
+2021-08-29 06:51:30,102 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.quartz.QuartzInitializationHelper): Initializing Quartz scheduler (but not starting it yet).
+2021-08-29 06:51:30,166 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.quartz.QuartzInitializationHelper): ... Quartz scheduler initialized.
+2021-08-29 06:51:30,166 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.quartz.LocalScheduler): Quartz scheduler execution limits set to: {null=null, DefaultNode=null, *=0} (were: null)
+2021-08-29 06:51:30,167 [TASK_MANAGER] [main] INFO (com.evolveum.midpoint.task.quartzimpl.quartz.TaskSynchronizer): Synchronizing Quartz job store with midPoint repository.
+2021-08-29 06:51:30,179 [TASK_MANAGER] [main] INFO (com.evolveum.midpoint.task.quartzimpl.quartz.TaskSynchronizer): Synchronization of midpoint and Quartz task store finished. 0 task(s) existing in midPoint repository successfully processed, resulting in 0 updated Quartz job(s). 0 task(s) removed from Quartz job store. Processing of 0 task(s) failed.
+2021-08-29 06:51:30,179 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.UpAndDown): Task Manager initialized
+2021-08-29 06:51:30,185 [] [main] INFO (com.evolveum.midpoint.repo.sql.SqlRepositoryServiceImpl): Repository initialization finished.
+2021-08-29 06:51:53,296 [] [main] ERROR (com.evolveum.midpoint.model.common.expression.script.jsr223.Jsr223ScriptEvaluator): The JSR-223 scripting engine for 'python' was not found
+com.evolveum.midpoint.util.exception.SystemException: The JSR-223 scripting engine for 'python' was not found
+	at com.evolveum.midpoint.model.common.expression.script.jsr223.Jsr223ScriptEvaluator.<init>(Jsr223ScriptEvaluator.java:48)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:212)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:311)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:296)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:428)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1689)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.apache.wicket.spring.SpringWebApplicationFactory.createApplication(SpringWebApplicationFactory.java:152)
+	at org.apache.wicket.spring.SpringWebApplicationFactory.createApplication(SpringWebApplicationFactory.java:142)
+	at org.apache.wicket.protocol.http.WicketFilter.init(WicketFilter.java:399)
+	at org.apache.wicket.protocol.http.WicketFilter.init(WicketFilter.java:365)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:271)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4613)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5256)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1388)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:921)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1388)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:921)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:437)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:934)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at com.evolveum.midpoint.web.boot.MidPointTomcatServletWebServerFactory.getTomcatWebServer(MidPointTomcatServletWebServerFactory.java:62)
+	at com.evolveum.midpoint.web.boot.MidPointTomcatServletWebServerFactory.getWebServer(MidPointTomcatServletWebServerFactory.java:108)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:144)
+	at com.evolveum.midpoint.web.boot.MidPointSpringApplication.main(MidPointSpringApplication.java:113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+	at com.evolveum.midpoint.tools.layout.MidPointWarLauncher.main(MidPointWarLauncher.java:52)
+2021-08-29 06:51:55,881 [] [main] INFO (com.evolveum.midpoint.provisioning.ucf.impl.connid.ConnectorFactoryConnIdImpl): Discovered ICF bundle on CLASSPATH: com.evolveum.polygon.connector-databasetable version: 1.4.6.0
+2021-08-29 06:51:55,952 [] [main] INFO (com.evolveum.midpoint.provisioning.ucf.impl.connid.ConnectorFactoryConnIdImpl): Discovered ICF bundle on CLASSPATH: com.evolveum.polygon.connector-ldap version: 3.3-M5
+2021-08-29 06:51:56,189 [] [main] INFO (com.evolveum.midpoint.provisioning.ucf.impl.connid.ConnectorFactoryConnIdImpl): Discovered ICF bundle on CLASSPATH: com.evolveum.polygon.connector-csv version: 2.4
+2021-08-29 06:51:56,551 [] [main] INFO (com.evolveum.midpoint.wf.impl.hook.WfHook): Workflow change hook was registered.
+2021-08-29 06:51:56,960 [] [main] INFO (com.evolveum.midpoint.init.RepoInitialSetup): Repository post initialization.
+2021-08-29 06:51:56,964 [] [main] INFO (com.evolveum.midpoint.init.RepoInitialSetup): Repository post initialization finished successfully.
+2021-08-29 06:51:56,968 [] [main] INFO (com.evolveum.midpoint.init.RepoCacheInitialSetup): Repository cache post initialization.
+2021-08-29 06:51:57,046 [] [main] INFO (com.evolveum.midpoint.repo.cache.global.GlobalObjectCache): Created global repository object cache with a capacity of 9223372036854775807 objects
+2021-08-29 06:51:57,049 [] [main] INFO (com.evolveum.midpoint.repo.cache.global.GlobalVersionCache): Created global repository object version cache with a capacity of 9223372036854775807 objects
+2021-08-29 06:51:57,051 [] [main] INFO (com.evolveum.midpoint.repo.cache.global.GlobalQueryCache): Created global repository query cache with a capacity of 9223372036854775807 queries
+2021-08-29 06:51:57,051 [] [main] INFO (com.evolveum.midpoint.init.RepoCacheInitialSetup): Repository cache post initialization finished successfully.
+2021-08-29 06:51:57,059 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial object import (if necessary).
+2021-08-29 06:51:57,175 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 000-system-configuration.xml.
+2021-08-29 06:51:57,184 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference globalSecurityPolicyRef refers to a non-existing object 00000000-0000-0000-0000-000000000120
+2021-08-29 06:51:57,188 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000344
+2021-08-29 06:51:57,191 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000340
+2021-08-29 06:51:57,194 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000341
+2021-08-29 06:51:57,196 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000342
+2021-08-29 06:51:57,198 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000501
+2021-08-29 06:51:57,200 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000502
+2021-08-29 06:51:57,203 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000503
+2021-08-29 06:51:57,206 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000504
+2021-08-29 06:51:57,210 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000505
+2021-08-29 06:51:57,212 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000506
+2021-08-29 06:51:57,214 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000507
+2021-08-29 06:51:57,217 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000508
+2021-08-29 06:51:57,219 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000509
+2021-08-29 06:51:57,223 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000520
+2021-08-29 06:51:57,227 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000521
+2021-08-29 06:51:57,229 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000528
+2021-08-29 06:51:57,232 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000529
+2021-08-29 06:51:57,234 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000170
+2021-08-29 06:51:57,236 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0000-000000000171
+2021-08-29 06:51:57,240 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference configurableDashboardRef refers to a non-existing object 00000000-0000-0000-0001-000000000001
+2021-08-29 06:51:57,375 [MODEL] [main] INFO (com.evolveum.midpoint.audit.log): 2021-08-29T06:51:57.353+0000 eid=1630219917353-0-1, et=ADD_OBJECT, es=REQUEST, sid=1630219917065-0-1, rid=6267ff80-db99-4594-8b7d-253413a96900, tid=1630219917065-0-1, toid=null, hid=null, nid=DefaultNode, raddr=null, I=null, T=AssignmentHolderType:00000000-0000-0000-0000-000000000001(systemConfiguration), TO=null, D=[00000000-0000-0000-0000-000000000001:ADD], ch=http://midpoint.evolveum.com/xml/ns/public/common/channels-3#init, o=null, p=null, m=Object of type 'SystemConfigurationType' with OID '00000000-0000-0000-0000-000000000001' was not found.
+2021-08-29 06:51:57,376 [MODEL] [main] INFO (com.evolveum.midpoint.repo.sqlbase.perfmon.SqlPerformanceMonitorImpl): SQL Performance Monitor initialized (level = 4)
+2021-08-29 06:51:57,689 [] [main] INFO (com.evolveum.midpoint.common.LoggingConfigurationManager): Applying logging configuration (version 0)
+2021-08-29 06:51:57,829 [REPOSITORY] [main] INFO (com.evolveum.midpoint.repo.sql.SqlRepositoryServiceImpl): Applying full text search configuration (0 entries)
+2021-08-29 06:51:57,835 [REPOSITORY] [main] INFO (com.evolveum.midpoint.schema.cache.CacheConfigurationManager): Applied caching configuration: 0 profiles
+2021-08-29 06:51:58,270 [] [main] INFO (com.evolveum.midpoint.common.LoggingConfigurationManager): Applying logging configuration (currently applied version: 0, new version: 1)
+2021-08-29 06:51:58,323 [REPOSITORY] [main] INFO (com.evolveum.midpoint.repo.sql.SqlRepositoryServiceImpl): Applying full text search configuration (0 entries)
+2021-08-29 06:51:58,326 [REPOSITORY] [main] INFO (com.evolveum.midpoint.schema.cache.CacheConfigurationManager): Applied caching configuration: 0 profiles
+2021-08-29 06:51:58,329 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created systemConfiguration:00000000-0000-0000-0000-000000000001(SystemConfiguration) as part of initial import
+2021-08-29 06:51:58,335 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 010-value-policy.xml.
+2021-08-29 06:51:58,443 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created valuePolicy:00000000-0000-0000-0000-000000000003(Default Password Policy) as part of initial import
+2021-08-29 06:51:58,449 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 015-security-policy.xml.
+2021-08-29 06:51:58,533 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created securityPolicy:00000000-0000-0000-0000-000000000120(Default Security Policy) as part of initial import
+2021-08-29 06:51:58,538 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 020-archetype-system-user.xml.
+2021-08-29 06:51:58,734 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000300(System user) as part of initial import
+2021-08-29 06:51:58,738 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 021-archetype-system-role.xml.
+2021-08-29 06:51:58,851 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000320(System role) as part of initial import
+2021-08-29 06:51:58,855 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 022-archetype-business-role.xml.
+2021-08-29 06:51:58,945 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000321(Business role) as part of initial import
+2021-08-29 06:51:58,949 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 023-archetype-manual-provisioning-case.xml.
+2021-08-29 06:51:59,054 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000340(Manual provisioning case) as part of initial import
+2021-08-29 06:51:59,058 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 024-archetype-operation-request.xml.
+2021-08-29 06:51:59,151 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000341(Operation request) as part of initial import
+2021-08-29 06:51:59,156 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 025-archetype-approval-case.xml.
+2021-08-29 06:51:59,242 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000342(Approval case) as part of initial import
+2021-08-29 06:51:59,246 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 026-archetype-trace.xml.
+2021-08-29 06:51:59,323 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000343(Trace) as part of initial import
+2021-08-29 06:51:59,328 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 030-role-superuser.xml.
+2021-08-29 06:51:59,459 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created role:00000000-0000-0000-0000-000000000004(Superuser) as part of initial import
+2021-08-29 06:51:59,468 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 040-role-enduser.xml.
+2021-08-29 06:51:59,653 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created role:00000000-0000-0000-0000-000000000008(End user) as part of initial import
+2021-08-29 06:51:59,658 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 041-role-approver.xml.
+2021-08-29 06:51:59,778 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created role:00000000-0000-0000-0000-00000000000a(Approver) as part of initial import
+2021-08-29 06:51:59,784 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 042-role-reviewer.xml.
+2021-08-29 06:51:59,898 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created role:00000000-0000-0000-0000-00000000000b(Reviewer) as part of initial import
+2021-08-29 06:51:59,905 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 043-role-delegator.xml.
+2021-08-29 06:52:00,012 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created role:00000000-0000-0000-0000-00000000000c(Delegator) as part of initial import
+2021-08-29 06:52:00,018 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 050-user-administrator.xml.
+2021-08-29 06:52:00,149 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created user:00000000-0000-0000-0000-000000000002(administrator) as part of initial import
+2021-08-29 06:52:00,154 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 060-archetype-report-dashboard.xml.
+2021-08-29 06:52:00,211 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000170(Dashboard report) as part of initial import
+2021-08-29 06:52:00,215 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 061-archetype-report-collection.xml.
+2021-08-29 06:52:00,269 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000171(Collection report) as part of initial import
+2021-08-29 06:52:00,291 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 090-report-audit.xml.
+2021-08-29 06:52:00,296 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0001-000000000284
+2021-08-29 06:52:00,369 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created report:00000000-0000-0000-0000-000000000080(All audit records report) as part of initial import
+2021-08-29 06:52:00,375 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 100-report-reconciliation.xml.
+2021-08-29 06:52:00,378 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0001-000000000008
+2021-08-29 06:52:00,464 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created report:00000000-0000-0000-0000-000000000100(Reconciliation report) as part of initial import
+2021-08-29 06:52:00,469 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 110-report-user-list.xml.
+2021-08-29 06:52:00,547 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created report:00000000-0000-0000-0000-000000000110(Users in MidPoint) as part of initial import
+2021-08-29 06:52:00,553 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 130-report-certification-definitions.xml.
+2021-08-29 06:52:00,620 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created report:00000000-0000-0000-0000-000000000130(Certification definitions report) as part of initial import
+2021-08-29 06:52:00,626 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 140-report-certification-campaigns.xml.
+2021-08-29 06:52:00,629 [MODEL] [main] WARN (com.evolveum.midpoint.model.impl.util.ModelImplUtils): Reference collectionRef refers to a non-existing object 00000000-0000-0000-0001-000000000280
+2021-08-29 06:52:00,701 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created report:00000000-0000-0000-0000-000000000140(Certification campaigns report) as part of initial import
+2021-08-29 06:52:00,706 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 150-report-certification-cases.xml.
+2021-08-29 06:52:00,776 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created report:00000000-0000-0000-0000-000000000150(Certification cases report) as part of initial import
+2021-08-29 06:52:00,782 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 160-report-certification-decisions.xml.
+2021-08-29 06:52:00,850 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created report:00000000-0000-0000-0000-000000000160(Certification decisions report) as part of initial import
+2021-08-29 06:52:00,857 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 200-lookup-languages.xml.
+2021-08-29 06:52:00,953 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created lookupTable:00000000-0000-0000-0000-000000000200(Languages) as part of initial import
+2021-08-29 06:52:00,958 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 210-lookup-locales.xml.
+2021-08-29 06:52:01,036 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created lookupTable:00000000-0000-0000-0000-000000000210(Locales) as part of initial import
+2021-08-29 06:52:01,199 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 220-lookup-timezones.xml.
+2021-08-29 06:52:01,743 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created lookupTable:00000000-0000-0000-0000-000000000220(Timezones) as part of initial import
+2021-08-29 06:52:01,747 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 230-lookup-lifecycle-state.xml.
+2021-08-29 06:52:01,794 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created lookupTable:00000000-0000-0000-0000-000000000230(Lifecycle States) as part of initial import
+2021-08-29 06:52:01,797 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 240-lookup-state.xml.
+2021-08-29 06:52:01,844 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created lookupTable:00000000-0000-0000-0000-000000000240(States) as part of initial import
+2021-08-29 06:52:01,849 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 250-object-collection-resource-all.xml.
+2021-08-29 06:52:01,892 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000006(All resources) as part of initial import
+2021-08-29 06:52:01,897 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 251-object-collection-resource-up.xml.
+2021-08-29 06:52:01,959 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000003(Resources up) as part of initial import
+2021-08-29 06:52:01,963 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 260-object-collection-task-all.xml.
+2021-08-29 06:52:02,005 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000007(All tasks) as part of initial import
+2021-08-29 06:52:02,009 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 261-object-collection-task-active.xml.
+2021-08-29 06:52:02,073 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000005(Active tasks) as part of initial import
+2021-08-29 06:52:02,079 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 270-object-collection-audit.xml.
+2021-08-29 06:52:02,151 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000284(All audit records) as part of initial import
+2021-08-29 06:52:02,156 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 271-object-collection-audit-24h.xml.
+2021-08-29 06:52:02,189 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000285(Audit records in 24h) as part of initial import
+2021-08-29 06:52:02,193 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 272-object-collection-audit-errors-24h.xml.
+2021-08-29 06:52:02,235 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000004(Error audit records in 24h) as part of initial import
+2021-08-29 06:52:02,240 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 273-object-collection-audit-modifications-24h.xml.
+2021-08-29 06:52:02,285 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000002(Modification audit records in 24h) as part of initial import
+2021-08-29 06:52:02,289 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 280-object-collection-certification-campaign-all.xml.
+2021-08-29 06:52:02,330 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000280(All certification campaigns) as part of initial import
+2021-08-29 06:52:02,333 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 290-object-collection-shadow-all.xml.
+2021-08-29 06:52:02,371 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0001-000000000008(All shadows) as part of initial import
+2021-08-29 06:52:02,380 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 310-dashboard-admin.xml.
+2021-08-29 06:52:02,464 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created dashboard:00000000-0000-0000-0001-000000000001(admin-dashboard) as part of initial import
+2021-08-29 06:52:02,468 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 330-object-collection-my-cases.xml.
+2021-08-29 06:52:02,512 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created objectCollection:00000000-0000-0000-0000-000000000344(My cases) as part of initial import
+2021-08-29 06:52:02,520 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 501-archetype-task-reconciliation.xml.
+2021-08-29 06:52:02,685 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000501(Reconciliation task) as part of initial import
+2021-08-29 06:52:02,690 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 502-archetype-task-recomputation.xml.
+2021-08-29 06:52:02,784 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000502(Recomputation task) as part of initial import
+2021-08-29 06:52:02,789 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 503-archetype-task-import.xml.
+2021-08-29 06:52:02,870 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000503(Import task) as part of initial import
+2021-08-29 06:52:02,875 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 504-archetype-task-live-sync.xml.
+2021-08-29 06:52:02,963 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000504(Live synchronization task) as part of initial import
+2021-08-29 06:52:02,968 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 505-archetype-task-async-update.xml.
+2021-08-29 06:52:03,042 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000505(Asynchronous update task) as part of initial import
+2021-08-29 06:52:03,046 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 506-archetype-task-cleanup.xml.
+2021-08-29 06:52:03,123 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000506(Cleanup task) as part of initial import
+2021-08-29 06:52:03,127 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 507-archetype-task-report.xml.
+2021-08-29 06:52:03,213 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000507(Report task) as part of initial import
+2021-08-29 06:52:03,218 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 508-archetype-task-single-bulk-action.xml.
+2021-08-29 06:52:03,301 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000508(Single bulk action task) as part of initial import
+2021-08-29 06:52:03,305 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 509-archetype-task-iterative-bulk-action.xml.
+2021-08-29 06:52:03,390 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000509(Iterative bulk action task) as part of initial import
+2021-08-29 06:52:03,393 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 520-archetype-task-certification.xml.
+2021-08-29 06:52:03,459 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000520(Certification-related task) as part of initial import
+2021-08-29 06:52:03,463 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 521-archetype-task-approval.xml.
+2021-08-29 06:52:03,528 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000521(Approval-related task) as part of initial import
+2021-08-29 06:52:03,532 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 528-archetype-task-util.xml.
+2021-08-29 06:52:03,599 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000528(Utility task) as part of initial import
+2021-08-29 06:52:03,607 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 529-archetype-task-system.xml.
+2021-08-29 06:52:03,668 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created archetype:00000000-0000-0000-0000-000000000529(System task) as part of initial import
+2021-08-29 06:52:03,673 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 550-task-cleanup.xml.
+2021-08-29 06:52:03,794 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created task:00000000-0000-0000-0000-000000000005(Cleanup) as part of initial import
+2021-08-29 06:52:03,797 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 560-task-validity.xml.
+2021-08-29 06:52:03,852 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created task:00000000-0000-0000-0000-000000000006(Validity Scanner) as part of initial import
+2021-08-29 06:52:03,856 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 570-task-trigger.xml.
+2021-08-29 06:52:03,913 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created task:00000000-0000-0000-0000-000000000007(Trigger Scanner) as part of initial import
+2021-08-29 06:52:03,917 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Starting initial import of file 600-origin-internal.xml.
+2021-08-29 06:52:03,966 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Created service:00000000-0000-0000-0000-000000000600(Internal) as part of initial import
+2021-08-29 06:52:03,967 [] [main] INFO (com.evolveum.midpoint.init.InitialDataImport): Initial object import finished (59 objects imported, 0 errors, 0 skipped)
+2021-08-29 06:52:03,971 [] [main] INFO (com.evolveum.midpoint.init.ModelInitialSetup): Model post initialization.
+2021-08-29 06:52:03,978 [MODEL] [main] INFO (com.evolveum.midpoint.repo.sql.SqlRepositoryServiceImpl): Applying full text search configuration (0 entries)
+2021-08-29 06:52:03,980 [MODEL] [main] INFO (com.evolveum.midpoint.schema.cache.CacheConfigurationManager): Applied caching configuration: 0 profiles
+2021-08-29 06:52:03,981 [MODEL] [main] WARN (com.evolveum.midpoint.repo.cache.global.GlobalObjectCache): Global object cache was already initialized -- ignoring this request.
+2021-08-29 06:52:03,982 [MODEL] [main] WARN (com.evolveum.midpoint.repo.cache.global.GlobalVersionCache): Global version cache was already initialized -- ignoring this request.
+2021-08-29 06:52:03,982 [MODEL] [main] WARN (com.evolveum.midpoint.repo.cache.global.GlobalQueryCache): Global query cache was already initialized -- ignoring this request.
+2021-08-29 06:52:04,270 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ConnectorManager): Discovered new connector connector:897b7203-dd53-4ee2-83bd-1d6b4cac6ef1(ConnId com.evolveum.polygon.connector.ldap.ad.AdLdapConnector v3.3-M5)
+2021-08-29 06:52:04,281 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ConnectorManager): Discovered new connector connector:1a450b1b-efdd-426d-9cc7-e9a3326dca9f(ConnId com.evolveum.polygon.connector.csv.CsvConnector v2.4)
+2021-08-29 06:52:04,292 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ConnectorManager): Discovered new connector connector:11d1360e-8aa7-48d4-b047-e0d83575a494(ConnId org.identityconnectors.databasetable.DatabaseTableConnector v1.4.6.0)
+2021-08-29 06:52:04,303 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ConnectorManager): Discovered new connector connector:ff8606b9-8dbd-4726-a7b6-71f6a27339b5(ConnId com.evolveum.polygon.connector.ldap.LdapConnector v3.3-M5)
+2021-08-29 06:52:05,352 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ConnectorManager): Discovered new connector connector:460ca0e8-5df1-4811-9521-594f8b7378b2(Built-in AsyncUpdateConnector v1.0.0)
+2021-08-29 06:52:05,359 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ConnectorManager): Discovered new connector connector:2e289996-8d24-4280-b2ea-a4f8e63194f5(Built-in ManualConnector v1.0.0)
+2021-08-29 06:52:05,366 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ConnectorManager): Discovered new connector connector:b83e2877-149c-4dfd-9352-c06c8e9294e8(Built-in AsyncProvisioningConnector v1.0.0)
+2021-08-29 06:52:05,367 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ProvisioningServiceImpl): Discovered local connector connector: Built-in ManualConnector v1.0.0 (OID:2e289996-8d24-4280-b2ea-a4f8e63194f5)
+2021-08-29 06:52:05,368 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ProvisioningServiceImpl): Discovered local connector connector: ConnId org.identityconnectors.databasetable.DatabaseTableConnector v1.4.6.0 (OID:11d1360e-8aa7-48d4-b047-e0d83575a494)
+2021-08-29 06:52:05,368 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ProvisioningServiceImpl): Discovered local connector connector: Built-in AsyncProvisioningConnector v1.0.0 (OID:b83e2877-149c-4dfd-9352-c06c8e9294e8)
+2021-08-29 06:52:05,369 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ProvisioningServiceImpl): Discovered local connector connector: ConnId com.evolveum.polygon.connector.csv.CsvConnector v2.4 (OID:1a450b1b-efdd-426d-9cc7-e9a3326dca9f)
+2021-08-29 06:52:05,369 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ProvisioningServiceImpl): Discovered local connector connector: ConnId com.evolveum.polygon.connector.ldap.LdapConnector v3.3-M5 (OID:ff8606b9-8dbd-4726-a7b6-71f6a27339b5)
+2021-08-29 06:52:05,370 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ProvisioningServiceImpl): Discovered local connector connector: ConnId com.evolveum.polygon.connector.ldap.ad.AdLdapConnector v3.3-M5 (OID:897b7203-dd53-4ee2-83bd-1d6b4cac6ef1)
+2021-08-29 06:52:05,370 [PROVISIONING] [main] INFO (com.evolveum.midpoint.provisioning.impl.ProvisioningServiceImpl): Discovered local connector connector: Built-in AsyncUpdateConnector v1.0.0 (OID:460ca0e8-5df1-4811-9521-594f8b7378b2)
+2021-08-29 06:52:05,371 [] [main] INFO (com.evolveum.midpoint.init.ModelInitialSetup): Model post initialization finished successfully.
+2021-08-29 06:52:05,382 [] [main] INFO (com.evolveum.midpoint.init.PostInitialDataImport): Starting initial object import (if necessary).
+2021-08-29 06:52:05,384 [] [main] INFO (com.evolveum.midpoint.init.PostInitialDataImport): Directory /opt/midpoint/var/ exists. Using it.
+2021-08-29 06:52:05,385 [] [main] INFO (com.evolveum.midpoint.init.PostInitialDataImport): Directory /opt/midpoint/var/post-initial-objects does not exist. Creating.
+2021-08-29 06:52:05,391 [] [main] INFO (com.evolveum.midpoint.init.PostInitialDataImport): Post-initial object import finished (0 objects imported, 0 scripts executed)
+2021-08-29 06:52:07,546 [] [main] INFO (org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver): Exposing 6 endpoint(s) beneath base path '/actuator'
+2021-08-29 06:52:07,726 [] [main] INFO (org.apache.coyote.http11.Http11NioProtocol): Starting ProtocolHandler ["http-nio-8080"]
+2021-08-29 06:52:07,764 [] [main] INFO (org.springframework.boot.web.embedded.tomcat.TomcatWebServer): Tomcat started on port(s): 8080 (http) with context path '/midpoint'
+2021-08-29 06:52:07,785 [] [main] INFO (com.evolveum.midpoint.web.boot.MidPointSpringApplication): Started MidPointSpringApplication in 56.251 seconds (JVM running for 58.252)
+2021-08-29 06:52:07,808 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.cluster.ClusterManager): Registering the node as started
+2021-08-29 06:52:07,815 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.cluster.NodeRegistrar): Found Tomcat JMX object 'Tomcat:type=Connector,port=8080': scheme = 'http', port = '8080'
+2021-08-29 06:52:07,825 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.cluster.NodeRegistrar): Changing node URL from null to http://d08f11878c5d:8080/midpoint
+2021-08-29 06:52:07,848 [] [main] INFO (com.evolveum.midpoint.repo.sql.SqlRepositoryServiceImpl): Applying full text search configuration (0 entries)
+2021-08-29 06:52:07,849 [] [main] INFO (com.evolveum.midpoint.schema.cache.CacheConfigurationManager): Applied caching configuration: 0 profiles
+2021-08-29 06:52:07,852 [] [ClusterManagerThread] INFO (com.evolveum.midpoint.task.quartzimpl.cluster.ClusterManager): ClusterManager thread starting.
+2021-08-29 06:52:07,855 [] [main] INFO (com.evolveum.midpoint.task.quartzimpl.quartz.LocalScheduler): Starting the Quartz scheduler
+2021-08-29 06:52:07,866 [] [main] INFO (org.quartz.core.QuartzScheduler): Scheduler midPointScheduler_$_DefaultNode started.
+2021-08-29 06:52:08,479 [] [midPointScheduler_Worker-1] INFO (com.evolveum.midpoint.repo.sql.SqlAuditServiceImpl): Starting audit cleanup, deleting up to Sat May 29 06:52:08 UTC 2021 (duration '-P3M'), batch size 500.
+2021-08-29 06:52:08,541 [] [midPointScheduler_Worker-1] INFO (com.evolveum.midpoint.repo.sql.SqlAuditServiceImpl): Audit cleanup based on age finished; deleted 0 entries in 0 seconds.
+2021-08-29 06:52:08,542 [] [midPointScheduler_Worker-1] INFO (com.evolveum.midpoint.model.impl.cleanup.CleanupPartialActivityExecution): Audit records cleanup: Finished
+2021-08-29 06:52:08,614 [TASK_MANAGER] [midPointScheduler_Worker-1] INFO (com.evolveum.midpoint.task.quartzimpl.tasks.TaskCleaner): Starting cleanup for closed tasks deleting up to 2021-07-29T06:52:08.613Z (duration 'P1M').
+2021-08-29 06:52:08,621 [TASK_MANAGER] [midPointScheduler_Worker-1] INFO (com.evolveum.midpoint.task.quartzimpl.tasks.TaskCleaner): Task cleanup procedure finished. Successfully deleted 0 tasks; there were problems with deleting 0 tasks.
+2021-08-29 06:52:08,623 [] [midPointScheduler_Worker-1] INFO (com.evolveum.midpoint.model.impl.cleanup.CleanupPartialActivityExecution): Closed tasks: Finished

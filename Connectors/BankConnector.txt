@@ -34,7 +34,7 @@
         <!-- Configuration specific for the CSV connector -->
         <icfc:configurationProperties
                 xmlns:icfccsvfile="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-csv/com.evolveum.polygon.connector.csv.CsvConnector">
-            <icfccsvfile:filePath>/opt/midpoint/var/resources/hr.csv</icfccsvfile:filePath>
+            <icfccsvfile:filePath>/opt/midpoint/var/resources/UpdatableCSV5.csv</icfccsvfile:filePath>
             <icfccsvfile:encoding>utf-8</icfccsvfile:encoding>
             <icfccsvfile:fieldDelimiter>,</icfccsvfile:fieldDelimiter>
             <icfccsvfile:multivalueDelimiter>;</icfccsvfile:multivalueDelimiter>
@@ -129,7 +129,7 @@
                 <displayName>Organizational unit</displayName>
                 <inbound>
                     <target>
-                        <path>$focus/dorganizationalUnit</path>
+                        <path>$focus/organizationalUnit</path>
                     </target>
                 </inbound>
             </attribute>
